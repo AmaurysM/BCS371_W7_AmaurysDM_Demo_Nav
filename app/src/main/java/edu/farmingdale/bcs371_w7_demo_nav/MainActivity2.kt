@@ -60,8 +60,9 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
             val newInt = Intent(Intent.ACTION_VIEW)
             newInt.setData(Uri.parse("geo:0,0?q=Farmingdale State College, NY"))
             context.startActivity(newInt)
-        },
-            modifier= Modifier.padding(start = 40.dp, end = 40.dp)) {
+        }
+            , enabled = switchState
+            , modifier= Modifier.padding(start = 40.dp, end = 40.dp)) {
             Icon( imageVector = Icons.Default.LocationOn, contentDescription = "Location")
             Text("Show me  Farmingdale", modifier = Modifier.padding(start = 10.dp))
         }
@@ -72,8 +73,9 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
             // ToDo 1: create implicit intent to open a web page or call a phone number
             newInt.setData(Uri.parse("tel:1234567890"))
             context.startActivity(newInt)
-        },
-            modifier= Modifier.padding(start = 40.dp, end = 40.dp)) {
+        }
+            , enabled = switchState
+            , modifier= Modifier.padding(start = 40.dp, end = 40.dp)) {
             Icon( imageVector = Icons.Default.Phone, contentDescription = "Phone")
             Text("Call Me", modifier = Modifier.padding(start = 10.dp))
         }
@@ -83,8 +85,9 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
         Button( onClick = {
             // ToDo 2: create explicit intent to open a new activity
             context.startActivity(Intent(context, MainActivity::class.java))
-        },
-            modifier= Modifier.padding(start = 40.dp, end = 40.dp)) {
+        }
+            , enabled = switchState
+            , modifier= Modifier.padding(start = 40.dp, end = 40.dp)) {
             Icon( imageVector = Icons.Default.Info, contentDescription = "Phone")
             Text("Go To activity 2", modifier = Modifier.padding(start = 10.dp))
         }
