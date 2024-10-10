@@ -90,7 +90,9 @@ fun FirstScreen(navController: NavController) {
             Button(onClick = { navController.navigate("second_screen") }) {
                 Text(text ="Go to Second Screen")
             }
-
+            Button(onClick = { navController.navigate("pizza_party_fun_screen") }){
+                Text(text = "Pizza Party")
+            }
         }
     }
 }
