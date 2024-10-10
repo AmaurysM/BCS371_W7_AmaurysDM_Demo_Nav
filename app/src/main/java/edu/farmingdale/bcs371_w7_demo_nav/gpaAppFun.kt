@@ -82,6 +82,10 @@ fun gpaappFun(navController: NavController) {
             Text(text = "GPA: $gpa")
         }
 
+        Button(onClick = { navController.navigate("first_screen") }){
+            Text(text = "Go To The First Screen")
+        }
+
 
     }
 }
